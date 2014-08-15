@@ -8,9 +8,11 @@ This project exposes a single `API` class which has a single `request` method.  
 ----------------------------------------------------------------
 ``` sphinx
 Builds the request and returns a python dictionary of the result or None.
-If 'payload' is specified, the request will be a POST, otherwise it will be a GET.  Review the 'method' argument for other actions.
+If 'payload' is specified, the request will be a POST, otherwise it will be a GET. 
+Review the 'method' argument for other actions.
 
-:param rest_path: appended to 'base_path' (defaults to '/portal/api'), eg: rest_path='/accounts' => '/portal/api/accounts'
+:param rest_path: appended to 'base_path' (defaults to '/portal/api')
+				  eg: rest_path='/accounts' => '/portal/api/accounts'
 :type rest_path: str or unicode
 
 :param params: the query parameters to be added to the url
