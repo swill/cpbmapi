@@ -4,8 +4,10 @@ This project is a minimalist wrapper around the CPBM BSS API.  Its purpose is to
 
 This project exposes a single `API` class which has a single `request` method.  This method takes a BSS API call and returns a python dictionary with the result.
 
-`request(self, rest_path, params={}, payload=None, method=None)`
-----------------------------------------------------------------
+``` python
+api.request(self, rest_path, params={}, payload=None, method=None)
+```
+
 ``` sphinx
 Builds the request and returns a python dictionary of the result or None.
 If 'payload' is specified, the request will be a POST, otherwise it will be a GET. 
