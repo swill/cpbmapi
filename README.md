@@ -30,6 +30,13 @@ Review the 'method' argument for other actions.
 :rtype: dict or None
 ```
 
+Here is a simple example:
+
+``` python
+	api = API(args)
+    accounts = api.request('/accounts')
+```
+
 
 INSTALL
 =======
