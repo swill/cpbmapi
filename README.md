@@ -31,7 +31,7 @@ Review the 'method' argument for other actions.
 
 INSTALL
 =======
-This project does not need to be installed, it can be run in-place.  This project does depend on a few libraries to keep things simple.
+This project does not need to be installed, it can be run in-place.  However, it does depend on a few libraries to keep things simple.
 
 docops
 ------
@@ -62,7 +62,7 @@ $ ./api_examples.py --help
 
 This project can be run as a stand alone script or the API object can be imported into other scripts in this directory as a library.
 
-`cpbm_api.py` is a stand alone script which can be used on its own.  You can simply change the code that gets run when the file is run, and it works on its own.
+`cpbm_api.py` is a stand alone script which can be run on its own, as well as a basic library which can be imported into other scripts.
 
-`api_examples.py` is an example of using the `cpbm_api.py` script as a library.  In this example, we have simply imported the API object in and started making requests.  This is ideal if you have multiple scripts that do different tasks and you want them to all exist at the same time.  Simply duplicate this file and change the api calls as needed.
+`api_examples.py` is an example of using the `cpbm_api.py` script as a library.  In this example, we  simply import the `API` object and start making requests.  This is ideal if you have multiple scripts that do different tasks and you want them to all exist at the same time.  Simply duplicate this file and change the api requests as needed.
 
