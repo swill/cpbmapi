@@ -70,7 +70,8 @@ Options:
   --base_path=<arg>     Base CPBM Api path [default: /portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
-  --clear_log=<arg>     Removes the log each time the API object is created [default: True].
+  --clear_log=<arg>     Removes the log each time the API object is created 
+  						[default: True].
 ```
 
 ``` bash
@@ -91,7 +92,8 @@ Options:
   --base_path=<arg>     Base CPBM Api path [default: /portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
-  --clear_log=<arg>     Removes the log each time the API object is created [default: True].
+  --clear_log=<arg>     Removes the log each time the API object is created 
+  						[default: True].
 ```
 
 This project can be run as a stand alone script or the API object can be imported into other scripts in this directory as a library.
