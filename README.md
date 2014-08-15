@@ -1,5 +1,5 @@
-CPBM API Wrapper
-================
+CPBM BSS API Wrapper
+====================
 This project is a minimalist wrapper around the CPBM BSS API.  Its purpose is to expedite the process of testing the API and building scripts to do useful tasks.
 
 This project exposes a single `API` class which has a single `request` method.  This method takes a BSS API call and returns a python dictionary with the result.
