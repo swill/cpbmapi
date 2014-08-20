@@ -122,7 +122,6 @@ class API(object):
                         f.write((method.upper() if method else "GET")+" "+url)
                         f.write('\n')
                     f.write('\n')
-                    f.write('response:\n')
                     if response.ok:
                         #pprint.pprint(response.headers, f, 2)  # if you want to log the headers too...
                         pprint.pprint(result, f, 2)
@@ -138,5 +137,6 @@ class API(object):
             
 if __name__ == '__main__':
     api = API(args) # call the constructor with the docopts arguments...
+
     pprint.pprint(api.request('/accounts'))
 
