@@ -39,4 +39,5 @@ args = docopt(__doc__)
 
 if __name__ == '__main__':
     api = API(args) # call the constructor with the docopts arguments...
+
     pprint.pprint(api.request('/accounts'))
