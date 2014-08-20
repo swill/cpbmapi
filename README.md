@@ -33,8 +33,8 @@ Review the 'method' argument for other actions.
 Here is a simple example:
 
 ``` python
-	api = API(args)
-    accounts = api.request('/accounts')
+api = API(args)
+accounts = api.request('/accounts')
 ```
 
 
@@ -109,7 +109,7 @@ Options:
   						[default: True].
 ```
 
-This project can be run as a stand alone script or the API object can be imported into other scripts in this directory as a library.
+This project can be run as a stand alone script or the `API` object can be imported into other scripts in this directory as a library.
 
 `cpbm_api.py` is a stand alone script which can be run on its own, as well as a basic library which can be imported into other scripts.
 

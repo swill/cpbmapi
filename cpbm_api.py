@@ -46,11 +46,11 @@ args = docopt(__doc__)
 
 class API(object):
     def __init__(self, args):
-        self.protocol = args['--protocol']
-        self.host = args['--host']
-        self.base_path = args['--base_path']
         self.api_key = args['--api_key']
         self.secret_key = args['--secret_key']
+        self.host = args['--host']
+        self.protocol = args['--protocol']
+        self.base_path = args['--base_path']
         self.logging = True if args['--logging'].lower() == 'true' else False
         self.log = args['--log']
         self.log_dir = os.path.dirname(self.log)
