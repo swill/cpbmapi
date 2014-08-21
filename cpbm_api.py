@@ -45,6 +45,12 @@ import urllib
 args = docopt(__doc__)
 
 class API(object):
+    """
+    Instantiate this class with the docops arguments, then use the 'request' method to make calls to the CPBM API.
+
+    api = API(args)
+    accounts = api.request('/accounts')
+    """
     def __init__(self, args):
         self.api_key = args['--api_key']
         self.secret_key = args['--secret_key']
