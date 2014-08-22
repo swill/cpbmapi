@@ -67,7 +67,7 @@ $ ./cpbm_api.py --help
 
 ```
 Usage:
-  cpbm_api.py (--api_key=<api_key> --secret_key=<secret_key>) [options]
+  cpbm_api.py (--api_key=<arg> --secret_key=<arg>) [options]
   cpbm_api.py (-h | --help)
 
 Options:
@@ -75,14 +75,14 @@ Options:
   --api_key=<arg>       CPBM Api Key.
   --secret_key=<arg>    CPBM Secret Key.
   --host=<arg>          CPBM IP or hostname (including port) 
-  						[default: 127.0.0.1:8080].
+  						          [default: 127.0.0.1:8080].
   --protocol=<arg>      Protocol used to connect to CPBM (http | https) 
-  						[default: http].
+  						          [default: http].
   --base_path=<arg>     Base CPBM Api path [default: /portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
   --clear_log=<arg>     Removes the log each time the API object is created 
-  						[default: True].
+  						          [default: True].
 ```
 
 ``` bash
@@ -91,7 +91,7 @@ $ ./api_examples.py --help
 
 ```
 Usage:
-  api_examples.py (--api_key=<api_key> --secret_key=<secret_key>) [options]
+  api_examples.py (--api_key=<arg> --secret_key=<arg>) [options]
   api_examples.py (-h | --help)
 
 Options:
@@ -99,14 +99,14 @@ Options:
   --api_key=<arg>       CPBM Api Key.
   --secret_key=<arg>    CPBM Secret Key.
   --host=<arg>          CPBM IP or hostname (including port) 
-  						[default: 127.0.0.1:8080].
+  						          [default: 127.0.0.1:8080].
   --protocol=<arg>      Protocol used to connect to CPBM (http | https) 
-  						[default: http].
+  						          [default: http].
   --base_path=<arg>     Base CPBM Api path [default: /portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
   --clear_log=<arg>     Removes the log each time the API object is created 
-  						[default: True].
+  						          [default: True].
 ```
 
 This project can be run as a stand alone script or the `API` object can be imported into other scripts in this directory as a library.

@@ -16,7 +16,7 @@
 
 """
 Usage:
-  api_examples.py (--api_key=<api_key> --secret_key=<secret_key>) [options]
+  api_examples.py (--api_key=<arg> --secret_key=<arg>) [options]
   api_examples.py (-h | --help)
 
 Options:
