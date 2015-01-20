@@ -23,9 +23,7 @@ Options:
   -h --help             Show this screen.
   --api_key=<arg>       CPBM Api Key.
   --secret_key=<arg>    CPBM Secret Key.
-  --host=<arg>          CPBM IP or hostname (including port) [default: 127.0.0.1:8080].
-  --protocol=<arg>      Protocol used to connect to CPBM (http | https) [default: http].
-  --base_path=<arg>     Base CPBM Api path [default: /portal/api].
+  --endpoint=<arg>      CPBM Endpoint [default: http://127.0.0.1:8080/portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
   --clear_log=<arg>     Removes the log each time the API object is created [default: True].
@@ -38,6 +36,6 @@ import pprint
 args = docopt(__doc__)
 
 if __name__ == '__main__':
-    api = API(args) # call the constructor with the docopts arguments...
+    api = API(args) # call the constructor with the docopt arguments...
 
     pprint.pprint(api.request('/accounts'))

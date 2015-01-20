@@ -13,8 +13,7 @@ Builds the request and returns a python dictionary of the result or None.
 If 'payload' is specified, the request will be a POST, otherwise it will be a GET. 
 Review the 'method' argument for other actions.
 
-:param rest_path: appended to 'base_path' (defaults to '/portal/api')
-				  eg: rest_path='/accounts' => '/portal/api/accounts'
+:param rest_path: appended to the 'endpoint'.  remember to include the leading '/'
 :type rest_path: str or unicode
 
 :param params: the query parameters to be added to the url
@@ -42,11 +41,11 @@ INSTALL
 =======
 This project does not need to be installed, it can be run in-place.  However, it does depend on a few libraries to keep things simple.
 
-docops
+docopt
 ------
 
 ``` bash
-$ pip install docops
+$ pip install docopt
 ```
 
 requests
@@ -74,15 +73,12 @@ Options:
   -h --help             Show this screen.
   --api_key=<arg>       CPBM Api Key.
   --secret_key=<arg>    CPBM Secret Key.
-  --host=<arg>          CPBM IP or hostname (including port) 
-  						          [default: 127.0.0.1:8080].
-  --protocol=<arg>      Protocol used to connect to CPBM (http | https) 
-  						          [default: http].
-  --base_path=<arg>     Base CPBM Api path [default: /portal/api].
+  --endpoint=<arg>      CPBM Endpoint 
+                        [default: http://127.0.0.1:8080/portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
   --clear_log=<arg>     Removes the log each time the API object is created 
-  						          [default: True].
+                        [default: True].
 ```
 
 ``` bash
@@ -98,15 +94,12 @@ Options:
   -h --help             Show this screen.
   --api_key=<arg>       CPBM Api Key.
   --secret_key=<arg>    CPBM Secret Key.
-  --host=<arg>          CPBM IP or hostname (including port) 
-  						          [default: 127.0.0.1:8080].
-  --protocol=<arg>      Protocol used to connect to CPBM (http | https) 
-  						          [default: http].
-  --base_path=<arg>     Base CPBM Api path [default: /portal/api].
+  --endpoint=<arg>      CPBM Endpoint 
+                        [default: http://127.0.0.1:8080/portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
   --clear_log=<arg>     Removes the log each time the API object is created 
-  						          [default: True].
+                        [default: True].
 ```
 
 This project can be run as a stand alone script or the `API` object can be imported into other scripts in this directory as a library.

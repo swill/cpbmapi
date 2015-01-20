@@ -23,9 +23,7 @@ Options:
   -h --help             Show this screen.
   --api_key=<arg>       CPBM Api Key.
   --secret_key=<arg>    CPBM Secret Key.
-  --host=<arg>          CPBM IP or hostname (including port) [default: 127.0.0.1:8080].
-  --protocol=<arg>      Protocol used to connect to CPBM (http | https) [default: http].
-  --base_path=<arg>     Base CPBM Api path [default: /portal/api].
+  --endpoint=<arg>      CPBM Endpoint [default: http://127.0.0.1:8080/portal/api].
   --logging=<arg>       Boolean to turn on or off logging [default: True].
   --log=<arg>           The log file to be used [default: logs/cpbm_api.log].
   --clear_log=<arg>     Removes the log each time the API object is created [default: True].
@@ -54,9 +52,7 @@ class API(object):
     def __init__(self, args):
         self.api_key = args['--api_key']
         self.secret_key = args['--secret_key']
-        self.host = args['--host']
-        self.protocol = args['--protocol']
-        self.base_path = args['--base_path']
+        self.endpoint = args['--endpoint']
         self.logging = True if args['--logging'].lower() == 'true' else False
         self.log = args['--log']
         self.log_dir = os.path.dirname(self.log)
@@ -71,7 +67,7 @@ class API(object):
         Builds the request and returns a python dictionary of the result or None.
         If 'payload' is specified, the request will be a POST, otherwise it will be a GET.  Review the 'method' argument for other actions.
 
-        :param rest_path: appended to 'base_path' (defaults to '/portal/api'), eg: rest_path='/accounts' => '/portal/api/accounts'
+        :param rest_path: appended to the 'endpoint'.  remember to include the leading '/'
         :type rest_path: str or unicode
 
         :param params: the query parameters to be added to the url
@@ -100,7 +96,7 @@ class API(object):
             signature_string = rest_path+"&".join(query_params).lower()
             signature = urllib.quote(base64.b64encode(hmac.new(self.secret_key, signature_string, hashlib.sha1).digest()))
 
-            url = self.protocol+'://'+self.host+self.base_path+rest_path+'?'+query_string+'&signature='+signature
+            url = self.endpoint+rest_path+'?'+query_string+'&signature='+signature
 
             if payload:
                 if method and method.upper() == 'PUT':
@@ -142,7 +138,7 @@ class API(object):
 
             
 if __name__ == '__main__':
-    api = API(args) # call the constructor with the docopts arguments...
+    api = API(args) # call the constructor with the docopt arguments...
 
     pprint.pprint(api.request('/accounts'))
 
