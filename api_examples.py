@@ -33,9 +33,8 @@ from docopt import docopt
 from cpbm_api import API
 import pprint
 
-args = docopt(__doc__)
-
 if __name__ == '__main__':
+    args = docopt(__doc__) # get the command line arguments...
     api = API(args) # call the constructor with the docopt arguments...
 
     pprint.pprint(api.request('/accounts'))

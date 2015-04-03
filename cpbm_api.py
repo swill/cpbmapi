@@ -40,8 +40,6 @@ import requests
 import time
 import urllib
 
-args = docopt(__doc__)
-
 class API(object):
     """
     Instantiate this class with the docops arguments, then use the 'request' method to make calls to the CPBM API.
@@ -138,6 +136,7 @@ class API(object):
 
             
 if __name__ == '__main__':
+    args = docopt(__doc__) # get the command line arguments...
     api = API(args) # call the constructor with the docopt arguments...
 
     pprint.pprint(api.request('/accounts'))
