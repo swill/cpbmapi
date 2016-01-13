@@ -50,6 +50,7 @@ Builds the request and returns a python dictionary of the result or None.
 **An example using the parent `API` class:**
 
 ``` python
+from cpbmapi import API
 api = API(api_key="your_api_key",
           secret_key="your_secred_key",
           endpoint="http://127.0.0.1:8080/portal/api")
@@ -59,6 +60,7 @@ accounts = api.request('/accounts')
 **An example using the `CLI` sub-class:**
 
 ``` python
+from cpbmapi import CLI
 api = CLI(__doc__)
 accounts = api.request('/accounts')
 ```
